@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('/My Documents/TestNodejs/src/views/partials/head') %>
+</head>
+
+<body>
+    <section class="w-100 p-4 d-flex justify-content-center align-items-center pb-4" style="min-height: 100vh;">
+      <div class="p-5 border border-secondary">
+        <for class="text-center pb-2">
+          <h3>Login</h3>
+        </for>
+        <% if(messages.error) { %>
+          <%= messages.error %>
+          <% } %>   
+        <form method="POST" style="width: 22rem; ">
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input id="txtUsername" type="text" name="username" class="form-control" required>
+            <label  class="form-label" for="txtUsername" style="margin-left: 0px;">Username</label>
+          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" id="txtPassword" class="form-control" name="password" required autocomplete="on">
+            <label class="form-label" for="txtPassword" style="margin-left: 0px;">Password</label>
+          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div></div>
+  
+          <!-- 2 column grid layout for inline styling -->
+          <div class="row mb-4">
+            <div class="col ">
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input id="checkBox" class="form-check-input" type="checkbox" value="" checked="" autocompleted="" >
+                <label  class="form-check-label" for="checkBox"> Remember me </label>
+              </div>
+            </div>
+  
+            <div class="col">
+              <!-- Simple link -->
+              <a style="float: right;" href="#!">Forgot password?</a>
+            </div>
+          </div>
+  
+          <!-- Submit button -->
+            <button type="submit" id="btn-sign-in" style="width: 100%;" class="btn btn-primary btn-block mb-4">Sign in</button>
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Not a member? <a  href="#!">Register</a></p>
+            <p>or sign up with:</p>
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      </section>
+ 
+    <%- include('/My Documents/TestNodejs/src/views/partials/script') %>
+
+    
+</body>
+
+<script>
+  $('#txtPassword').keyup(function(e) {
+    if(e.keyCode === 13) {
+      $('#btn-sign-in').click();
+    }
+  });
+</script>
+
+
+ 
+
+</html>
+

@@ -1,0 +1,29 @@
+{
+  "name": "testnodejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "~2.6.9",
+    "dompurify": "^2.3.9",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "jsdom": "^20.0.0",
+    "marked": "^4.0.18",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.4.2",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

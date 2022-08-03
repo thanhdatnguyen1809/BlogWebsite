@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sizeRatio: 15%;
+}
+
+
+body {
+    /* height: 500px; */
+    min-height: 100%;
+    font-size: 20px;
+}
+
+.admin-navbar {
+    width: var(--sizeRatio);
+    position: fixed;
+    height: 100%;
+}
+
+.admin-navbar ul {
+    width: 100%;
+}
+
+.admin-navbar ul li a {
+    color:aliceblue;    
+}
+
+.admin-navbar ul li a:hover {
+    background-color: aliceblue;
+    color:black;
+}
+
+.admin-navbar ul li a:focus {
+    background-color: aliceblue !important;
+}
+
+.content {
+    margin-left: var(--sizeRatio);
+}
+
